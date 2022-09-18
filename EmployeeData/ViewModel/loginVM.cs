@@ -8,7 +8,7 @@ namespace EmployeeData.ViewModel
 {
     public class loginVM
     {
-        public string UserName { get; set; }
+        public string UserName  { get; set; }
 
         public string password { get; set; }
 
