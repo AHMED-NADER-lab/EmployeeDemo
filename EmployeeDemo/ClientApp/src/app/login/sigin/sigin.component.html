@@ -1,0 +1,27 @@
+<form  [formGroup]="myForm" (ngSubmit)="onSubmit()">
+
+  <div class="form-group">
+    <label>
+      UserName:
+      <input formControlName="username" placeholder="Your username">
+    </label>
+    <div *ngIf="myForm.get('username')?.invalid && (myForm.get('username')?.dirty || myForm.get('username')?.touched)">
+      Please this  feild is required
+    </div>
+  </div>
+
+ 
+  <div class="form-group">
+    <label>
+      Password:
+      <input type="password" formControlName="password" placeholder="Your username">
+    </label>
+    <div *ngIf="myForm.get('password')?.invalid && (myForm.get('password')?.dirty || myForm.get('password')?.touched)">
+      Please this  feild is required
+    </div>
+  </div>
+
+
+
+  <button type="submit">Send</button>
+</form>

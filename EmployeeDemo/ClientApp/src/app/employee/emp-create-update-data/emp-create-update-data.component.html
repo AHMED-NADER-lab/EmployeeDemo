@@ -1,0 +1,64 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label>
+      FullName:
+      <input formControlName="fullname" placeholder="Your name">
+    </label>
+    <div *ngIf="myForm.get('fullname')?.invalid && (myForm.get('fullname')?.dirty || myForm.get('fullname')?.touched)">
+      Please this  feild is required
+    </div>
+  </div>
+  <div class="form-group">
+    <label>
+      UserName:
+      <input formControlName="username" placeholder="Your username">
+    </label>
+    <div *ngIf="myForm.get('username')?.invalid && (myForm.get('username')?.dirty || myForm.get('username')?.touched)">
+      Please this  feild is required
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Gender</label>
+    <select formControlName="gender" class="form-control">
+      <option value="">Select Gender</option>
+      <option value="male">male</option>
+      <option value="female">female</option>
+    </select>
+    <div *ngIf="myForm.get('gender')?.invalid && (myForm.get('gender')?.dirty || myForm.get('gender')?.touched)">
+      Please this  feild is required
+    </div>
+
+  </div>
+  <div class="form-group">
+    <label>
+      Password:
+      <input type="password" formControlName="password" placeholder="Your username">
+    </label>
+    <div *ngIf="myForm.get('password')?.invalid && (myForm.get('password')?.dirty || myForm.get('password')?.touched)">
+      Please this  feild is required
+    </div>
+  </div>
+  <div class="form-group">
+    <label>
+      salary:
+      <input formControlName="salary" placeholder=" salary">
+    </label>
+    <div *ngIf="myForm.get('salary')?.invalid && (myForm.get('salary')?.dirty || myForm.get('salary')?.touched)">
+      Please this  feild is required
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Department</label>
+    <select formControlName="department" class="form-control">
+      <option value="">Select department</option>
+      <option *ngFor="let item of Departments" [value]="item.id">{{item.name}}</option>
+    </select>
+    <div *ngIf="myForm.get('department')?.invalid && (myForm.get('department')?.dirty || myForm.get('department')?.touched)">
+      Please this  feild is required
+    </div>
+
+  </div>
+  <button type="submit">Send</button>
+</form>
