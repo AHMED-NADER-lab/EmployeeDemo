@@ -43,4 +43,8 @@ export class EmpListComponent implements OnInit {
     this.router.navigate(["create-update"]);
   }
 
+  editEmp(id:number) {
+    this.router.navigate(['create-update'], { queryParams: { empId: id } }); 
+  }
+
 }

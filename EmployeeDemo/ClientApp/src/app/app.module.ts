@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { EmployeeModule } from './employee/employee.module';
 import { LoginModule } from './login/login.module';
 import { HttpErrorInterceptor } from './interceptor/request-interceptor';
+import { AuthGuard, LoginGuard } from './Gurad/Auth-Guard';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { HttpErrorInterceptor } from './interceptor/request-interceptor';
     provide: HTTP_INTERCEPTORS,
     useClass: HttpErrorInterceptor,
     multi: true
-  }],
+  }, AuthGuard, LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -8,7 +8,7 @@
       Please this  feild is required
     </div>
   </div>
-  <div class="form-group">
+  <div class="form-group" *ngIf="!this.EmployeeIdRoute">
     <label>
       UserName:
       <input formControlName="username" placeholder="Your username">
@@ -30,7 +30,7 @@
     </div>
 
   </div>
-  <div class="form-group">
+  <div class="form-group"  *ngIf="!this.EmployeeIdRoute">
     <label>
       Password:
       <input type="password" formControlName="password" placeholder="Your username">

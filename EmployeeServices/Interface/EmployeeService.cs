@@ -160,7 +160,7 @@ namespace EmployeeServices.Interface
             return models;
         }
 
-        public async Task<EmployeeVM> UpdateEmployee(EmployeeVM model)
+        public async Task<UpdateEmployeeVM> UpdateEmployee(UpdateEmployeeVM model)
         {
             var emp = _employee.Get((int)model.Id);
             if (emp == null)
@@ -198,6 +198,7 @@ namespace EmployeeServices.Interface
 
             return new EmployeeVM()
                 {
+                Id= emp.Id,
                     departmentId = emp.departmentId,
                     fullName = emp.fullName,
                     gender = emp.gender,

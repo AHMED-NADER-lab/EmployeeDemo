@@ -29,7 +29,7 @@ namespace EmployeeDemo.Controllers
         }
         [HttpPost("UpdateEmployee")]
         [Authorize]
-        public async Task<ActionResult> UpdateEmployee([FromBody] EmployeeVM model)
+        public async Task<ActionResult> UpdateEmployee([FromBody] UpdateEmployeeVM model)
         {
             return Ok(await _employeeService.UpdateEmployee(model));
         }

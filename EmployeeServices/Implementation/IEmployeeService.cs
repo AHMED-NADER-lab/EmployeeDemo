@@ -18,7 +18,7 @@ namespace EmployeeServices.Implementation
 
         public EmployeeVM GetEmployee(int Id);
 
-        public Task<EmployeeVM> UpdateEmployee(EmployeeVM model);
+        public Task<UpdateEmployeeVM> UpdateEmployee(UpdateEmployeeVM model);
 
         public Task<bool> DeleteEmployeeAsync(int Id);
 

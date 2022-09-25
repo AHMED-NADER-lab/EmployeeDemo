@@ -22,4 +22,16 @@ namespace EmployeeData.ViewModel
         public bool isActive { get; set; }
 
     }
+
+
+    public class UpdateEmployeeVM
+    {
+        public int Id { get; set; }
+        public string fullName { get; set; }
+        public double salary { get; set; }
+        public Gender gender { get; set; }
+        public int departmentId { get; set; }
+        public bool isActive { get; set; }
+
+    }
 }

@@ -40,6 +40,12 @@ export class EmployeeDataService {
 
   }
 
+
+  UpdateEmployee(emp: any) {
+    return this.http.post('http://localhost:5276/Employee/UpdateEmployee', emp)
+
+  }
+
   login(data: any) {
     return this.http.post('http://localhost:5276/Employee/Login', data)
 
